@@ -1,5 +1,7 @@
 # Проект SPA онлайн магазин мебели
 
+![store-furniture](https://user-images.githubusercontent.com/93434868/167880698-253ce920-3aa0-4fc4-ab05-f8cb8dbe3436.gif)
+
 ## В проекте используется:
 
 - React.js;
