@@ -2,16 +2,16 @@ import React, { Component } from 'react';
 
 class Item extends Component {
   render() {
+    const { img, title, desc, price } = this.props.item;
+    const { onAdd, item } = this.props;
+
     return (
       <div className='item'>
-        <img src={'./img/' + this.props.item.img} alt='' />
-        <h2>{this.props.item.title}</h2>
-        <p>{this.props.item.desc}</p>
-        <b>{this.props.item.price} ₽</b>
-        <div
-          className='add-to-cart'
-          onClick={() => this.props.onAdd(this.props.item)}
-        >
+        <img src={'./img/' + img} alt='' />
+        <h2>{title}</h2>
+        <p>{desc}</p>
+        <b>{price} ₽</b>
+        <div className='add-to-cart' onClick={() => onAdd(item)}>
           +
         </div>
       </div>

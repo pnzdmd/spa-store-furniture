@@ -17,15 +17,25 @@ class Categories extends Component {
           key: 'tables',
           name: 'Столы',
         },
+        {
+          key: 'luminaires',
+          name: 'Светильники',
+        },
+        {
+          key: 'sofa',
+          name: 'Диваны',
+        },
       ],
     };
   }
 
   render() {
+    const { chooseCategory } = this.props;
+    const { categories } = this.state;
     return (
       <div className='categories'>
-        {this.state.categories.map((el) => (
-          <div key={el.key} onClick={() => this.props.chooseCategory(el.key)}>
+        {categories.map((el) => (
+          <div key={el.key} onClick={() => chooseCategory(el.key)}>
             {el.name}
           </div>
         ))}
